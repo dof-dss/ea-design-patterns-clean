@@ -1,14 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Company>DoF Digital Shared Services</Company>
-    <Description>A simple dotnet Standard library which provides base interfaces and classes for dotnet applications implementing the Clean Architecture design pattern.</Description>
+    <Description>A simple .NET Standard library which provides base interfaces and classes for dotnet applications implementing the Clean Architecture design pattern.</Description>
     <Authors>Alan Bailie</Authors>
     <Copyright>Crown Copyright 2019</Copyright>
     <PackageProjectUrl>https://github.com/dof-dss/ea-design-patterns-clean</PackageProjectUrl>
     <PackageTags>Clean, Architecture, DoF, NICS, DSS, .NET, Core, Standard</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/dof-dss/ea-design-patterns-clean</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
