@@ -1,0 +1,23 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  buildConfiguration: 'release'
+  major: 1
+  minor: 0
+  patch: $[counter('myversioncounter', 0)]
+ 
+steps:
+- script: |
+    dotnet build -c $(buildConfiguration)
+    dotnet pack DSS.Architecture.Patterns.DotNet.Clean/DSS.Architecture.Patterns.DotNet.Clean.csproj -c $(buildConfiguration) /p:PackageVersion=$(major).$(minor).$(patch) --output $(Build.ArtifactStagingDirectory) --no-build --no-restore
+ 
+- task: PublishBuildArtifacts@1
