@@ -14,7 +14,7 @@
     <RepositoryUrl>https://github.com/dof-dss/ea-design-patterns-clean</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageIconUrl>https://github.com/dof-dss/ea-design-patterns-clean/blob/master/dof-dss-avatar.png</PackageIconUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/dof-dss/ea-design-patterns-clean/master/dof-dss-avatar.png</PackageIconUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
