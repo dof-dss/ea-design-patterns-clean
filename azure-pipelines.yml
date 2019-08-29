@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  buildConfiguration: 'release'
+  buildConfiguration: 'Release'
   major: 1
   minor: 0
   patch: $[counter('myversioncounter', 0)]
@@ -21,6 +21,3 @@ steps:
     dotnet pack DSS.Architecture.Patterns.DotNet.Clean/DSS.Architecture.Patterns.DotNet.Clean.csproj -c $(buildConfiguration) /p:PackageVersion=$(major).$(minor).$(patch) --output $(Build.ArtifactStagingDirectory) --no-build --no-restore
  
 - task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
