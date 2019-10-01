@@ -2,9 +2,9 @@
 
 namespace DSS.Architecture.Patterns.DotNet.Clean.Gateways
 {
-    public interface IGenericUnitOfWorkAsync<TRepositoryType>
+    public interface IGenericUnitOfWorkAsync
     {
-        TRepositoryType GetRepository<TEntity>() where TEntity : class;
+        TRepositoryType GetRepository<TRepositoryType, TEntity>() where TEntity : class;
         Task Save();
     }
 }

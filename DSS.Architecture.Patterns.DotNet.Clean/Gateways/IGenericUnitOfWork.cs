@@ -1,8 +1,8 @@
 ﻿namespace DSS.Architecture.Patterns.DotNet.Clean.Gateways
 {
-    public interface IGenericUnitOfWork<TRepositoryType>
+    public interface IGenericUnitOfWork
     {
-        TRepositoryType GetRepository<TEntity>() where TEntity : class;
+        TRepositoryType GetRepository<TRepositoryType, TEntity>() where TEntity : class;
         void Save();
     }
 }
